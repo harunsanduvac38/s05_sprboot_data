@@ -61,7 +61,7 @@ public class Universidad {
 //		}
 		
 		
-		asigDao.buscarTodas().forEach((id, asig) -> System.out.println(id + " -* " + asig));
+//		asigDao.buscarTodas().forEach((id, asig) -> System.out.println(id + " -* " + asig));
 		
 		
 //		Asignatura buscadaEager = asigDao.findByIdEager(2);
@@ -80,6 +80,9 @@ public class Universidad {
 //		asigDao.findByFacultadContaining("Mate").forEach(System.out::println);
 		
 		
+//		profeDao.findByApellidos("alvar").forEach(System.out::println);
+		
+		asigDao.findByProfesor("va").forEach(System.out::println);
 		
 	}
 	

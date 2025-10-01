@@ -45,7 +45,7 @@ public class Profesor extends Persona{
 
 	@Override
 	public String toString() {
-		return "Profesor [" + super.getIdPersona() + ", " + super.getNombre() + ", " + nroSegSocial +  "]";
+		return "Profesor [" + super.getIdPersona() + ", " + super.getNombre() + ", " + super.getApellido1() + ", " + super.getApellido2() + ", " + nroSegSocial +  "]";
 	}
 	
 	
