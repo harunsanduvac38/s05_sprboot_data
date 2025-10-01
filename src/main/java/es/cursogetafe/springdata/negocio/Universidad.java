@@ -1,5 +1,7 @@
 package es.cursogetafe.springdata.negocio;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -48,15 +50,34 @@ public class Universidad {
 //		System.out.println("---------------------");
 //		System.out.println("---------------------");
 
-//		Asignatura buscada = asigDao.findById(9).get();
-//		System.out.println(buscada);
-//		System.out.println(buscada.getAlums());
+//		Optional<Asignatura> buscadaOpt = asigDao.findById(2);
+//		
+//		if(buscadaOpt.isPresent()) {
+//			Asignatura buscada = buscadaOpt.get();
+//			System.out.println(buscada);
+//			System.out.println(buscada.getAlums());
+//		}else {
+//			System.out.println("No Existe");
+//		}
+		
+		
+		asigDao.buscarTodas().forEach((id, asig) -> System.out.println(id + " -* " + asig));
+		
+		
+//		Asignatura buscadaEager = asigDao.findByIdEager(2);
+//		System.out.println(buscadaEager);
+//		System.out.println(buscadaEager.getAlums());
+		
 		
 //		asigDao.buscarSinProfesor().forEach(System.out::println);
 		
 //		asigDao.buscarPorDescripcion("info").forEach(System.out::println);
 		
-		Profesor profe = profeDao.findById(10).get();
+//		Profesor profe = profeDao.findById(10).get();
+//		asigDao.findByProfe(profe).forEach(System.out::println);
+		
+		
+//		asigDao.findByFacultadContaining("Mate").forEach(System.out::println);
 		
 		
 		
