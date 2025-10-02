@@ -20,9 +20,7 @@ public class AsignaturaDaoCustomImpl implements AsignaturaDaoCustom{
 	private ProfesorDao pDao;
 	
 	
-	
-	
-	
+
 	@Override
 	public Set<Asignatura> findByProfesor(String apellido) {
 //		Set<Asignatura> resu =  new HashSet<Asignatura>();
@@ -39,7 +37,6 @@ public class AsignaturaDaoCustomImpl implements AsignaturaDaoCustom{
 		return new HashSet<Asignatura>(q.getResultList());
 		
 	}
-
 
 
 	public EntityManager getEm() {

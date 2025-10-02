@@ -1,10 +1,13 @@
 package es.cursogetafe.springdata.negocio;
 
+import java.util.HashSet;
 import java.util.Optional;
+import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import es.cursogetafe.springdata.modelo.Alumno;
 import es.cursogetafe.springdata.modelo.Asignatura;
 import es.cursogetafe.springdata.modelo.Profesor;
 import es.cursogetafe.springdata.persistencia.AlumnoDao;
@@ -33,11 +36,16 @@ public class Universidad {
 		this.alumDao = alumDao;
 		this.profeDao = profeDao;
 	}
+	
+	
+	public Set<Alumno> getAlumnos() {
+		return new HashSet<Alumno>(alumDao.findAll());
+	}
 
 
 
 
-	@PostConstruct
+//	@PostConstruct
 	public void init() {
 		
 //		asigDao.findAll().forEach(System.out::println);
@@ -82,7 +90,7 @@ public class Universidad {
 		
 //		profeDao.findByApellidos("alvar").forEach(System.out::println);
 		
-		asigDao.findByProfesor("va").forEach(System.out::println);
+//		asigDao.findByProfesor("va").forEach(System.out::println);
 		
 	}
 	

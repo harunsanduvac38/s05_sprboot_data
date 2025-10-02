@@ -25,11 +25,11 @@ public class Alumno extends Persona {
 
 
 
-	public Alumno(int id, String dni, String nombre, String matricula, int anyoInscripcion, Set<Asignatura> asignas) {
+	public Alumno(int id, String dni, String nombre, String matricula, int anyoInscripcion) {
 		super(id, dni, nombre);
 		this.matricula = matricula;
 		this.anyoInscripcion = anyoInscripcion;
-		this.asignas = asignas;
+
 	}
 
 	public Alumno() {	
@@ -51,13 +51,7 @@ public class Alumno extends Persona {
 		this.anyoInscripcion = anyoInscripcion;
 	}
 
-	public Set<Asignatura> getAsignas() {
-		return asignas;
-	}
 
-	public void setAsignas(Set<Asignatura> asignas) {
-		this.asignas = asignas;
-	}
 
 	@Override
 	public String toString() {
